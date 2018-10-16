@@ -1,11 +1,11 @@
-require "rails/rails"
-require "pry"
+require 'rails/generators'
 
 module Mygem
   module Generators
-    class InstallGenerator < Rails::Generators::Base
+    class InstallGenerator < ::Rails::Generators::Base
+      require 'pry'
 
-      # namespace "mygem:install"
+      namespace "mygem:install"
 
       def process
         binding.pry
